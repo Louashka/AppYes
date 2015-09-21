@@ -1,6 +1,7 @@
 package com.tataev.yes;
 
 import android.content.Intent;
+import android.os.Handler;
 import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentActivity;
 import android.support.v4.app.FragmentManager;
@@ -21,12 +22,13 @@ import com.viewpagerindicator.TabPageIndicator;
 public class Novelty extends AppCompatActivity implements View.OnClickListener{
 
     private static String[] CONTENT;
-    TextView menu_nov_tab;
-    TextView nearby_nov_tab;
-    TextView novelty_nov_tab;
-    TextView favor_nov_tab;
-    TextView reservation_nov_tab;
-    TextView categories_nov_tab;
+    private ViewPager pager;
+    private TextView menu_nov_tab;
+    private TextView nearby_nov_tab;
+    private TextView novelty_nov_tab;
+    private TextView favor_nov_tab;
+    private TextView reservation_nov_tab;
+    private TextView categories_nov_tab;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -55,8 +57,14 @@ public class Novelty extends AppCompatActivity implements View.OnClickListener{
 
         FragmentPagerAdapter adapter = new GoogleMusicAdapter(getSupportFragmentManager());
 
-        ViewPager pager = (ViewPager)findViewById(R.id.pager);
+        pager = (ViewPager)findViewById(R.id.pager);
         pager.setAdapter(adapter);
+        new Handler().postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                pager.setCurrentItem(7);
+            }
+        },300);
 
         TabPageIndicator indicator = (TabPageIndicator)findViewById(R.id.indicator);
         indicator.setViewPager(pager);
@@ -139,4 +147,5 @@ public class Novelty extends AppCompatActivity implements View.OnClickListener{
             return CONTENT.length;
         }
     }
+
 }
