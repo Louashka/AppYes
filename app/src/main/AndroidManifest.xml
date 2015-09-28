@@ -101,7 +101,7 @@
         </activity>
         <activity
             android:name=".Registration"
-            android:label="@string/title_activity_registration"
+            android:label="@string/registration"
             android:parentActivityName=".Profile" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
@@ -109,7 +109,11 @@
         </activity>
         <activity
             android:name=".Requests"
-            android:label="@string/title_activity_requests" >
+            android:label="@string/title_activity_requests"
+            android:parentActivityName=".Users" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Users" />>
         </activity>
     </application>
 
