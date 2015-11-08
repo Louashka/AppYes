@@ -2,6 +2,17 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.tataev.yes" >
 
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+    <!--
+ The ACCESS_COARSE/FINE_LOCATION permissions are not required to use
+         Google Maps Android API v2, but are recommended.
+    -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -113,7 +124,360 @@
             android:parentActivityName=".Users" >
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Users" />>
+                android:value=".Users" />
+>
+        </activity>
+        <activity
+            android:name=".ClothForMen"
+            android:label="@string/title_activity_cloth_for_men" >
+        </activity>
+        <activity
+            android:name=".ClothForWoman"
+            android:label="@string/title_activity_cloth_for_woman" >
+        </activity>
+        <activity
+            android:name=".ClothForChildren"
+            android:label="@string/title_activity_cloth_for_children" >
+        </activity>
+        <activity
+            android:name=".GearsForAuto"
+            android:label="@string/title_activity_gears_for_auto" >
+        </activity>
+        <activity
+            android:name=".JewlryAndClock"
+            android:label="@string/title_activity_jewlry_and_clock" >
+        </activity>
+        <activity
+            android:name=".HomeAndGarden"
+            android:label="@string/title_activity_home_and_garden" >
+        </activity>
+        <activity
+            android:name=".InstrumensAndMaterials"
+            android:label="@string/title_activity_instrumens_and_materials" >
+        </activity>
+        <activity
+            android:name=".ComputerTech"
+            android:label="@string/title_activity_computer_tech" >
+        </activity>
+        <activity
+            android:name=".BeutyAndHealth"
+            android:label="@string/title_activity_beuty_and_health" >
+        </activity>
+        <activity
+            android:name=".SportAndPleasure"
+            android:label="@string/title_activity_sport_and_pleasure" >
+        </activity>
+        <activity
+            android:name=".BagsAndShoes"
+            android:label="@string/title_activity_bags_and_shoes" >
+        </activity>
+        <activity
+            android:name=".MobilesAndAccessories"
+            android:label="@string/title_activity_mobiles_and_accessories" >
+        </activity>
+        <activity
+            android:name=".Electronics"
+            android:label="@string/title_activity_electronics" >
+        </activity>
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+        <meta-data
+            android:name="com.google.android.maps.v2.API_KEY"
+            android:value="@string/google_maps_key" />
+
+        <activity
+            android:name=".MapsActivity"
+            android:label="@string/title_activity_maps" >
+        </activity>
+        <activity
+            android:name=".BottomClothForMan"
+            android:label="@string/title_activity_bottom_cloth_for_man" >
+        </activity>
+        <activity
+            android:name=".PopularMansCloth"
+            android:label="@string/title_activity_popular_mans_cloth" >
+        </activity>
+        <activity
+            android:name=".AccessoriesForMan"
+            android:label="@string/title_activity_accessories_for_man" >
+        </activity>
+        <activity
+            android:name=".SunGlass"
+            android:label="@string/title_activity_sun_glass" >
+        </activity>
+        <activity
+            android:name=".PopularForWoman"
+            android:label="@string/title_activity_popular_for_woman" >
+        </activity>
+        <activity
+            android:name=".TopForWoman"
+            android:label="@string/title_activity_top_for_woman" >
+        </activity>
+        <activity
+            android:name=".BottomForWoman"
+            android:label="@string/title_activity_bottom_for_woman" >
+        </activity>
+        <activity
+            android:name=".JacetAndCoat"
+            android:label="@string/title_activity_jacet_and_coat" >
+        </activity>
+        <activity
+            android:name=".WeddingAndCelebrity"
+            android:label="@string/title_activity_wedding_and_celebrity" >
+        </activity>
+        <activity
+            android:name=".Underwear"
+            android:label="@string/title_activity_underwear" >
+        </activity>
+        <activity
+            android:name=".WomanAccessory"
+            android:label="@string/title_activity_woman_accessory" >
+        </activity>
+        <activity
+            android:name=".ChildGoods"
+            android:label="@string/title_activity_child_goods" >
+        </activity>
+        <activity
+            android:name=".BoyGoods"
+            android:label="@string/title_activity_boy_goods" >
+        </activity>
+        <activity
+            android:name=".GirlsGoods"
+            android:label="@string/title_activity_girls_goods" >
+        </activity>
+        <activity
+            android:name=".PlaythingsAndHobby"
+            android:label="@string/title_activity_playthings_and_hobby" >
+        </activity>
+        <activity
+            android:name=".FragmentSpinnerAndButtons"
+            android:label="@string/title_activity_fragment_spinner_and_buttons" >
+        </activity>
+        <activity
+            android:name=".UpClothForMan"
+            android:label="@string/title_activity_up_cloth_for_man" >
+        </activity>
+        <activity
+            android:name=".PoloForMan"
+            android:label="@string/title_activity_polo_for_man" >
+        </activity>
+        <activity
+            android:name=".VestTshirt"
+            android:label="@string/title_activity_vest_tshirt" >
+        </activity>
+        <activity
+            android:name=".Shirt"
+            android:label="@string/title_activity_shirt" >
+        </activity>
+        <activity
+            android:name=".PulloversAndCardigans"
+            android:label="@string/title_activity_pullovers_and_cardigans" >
+        </activity>
+        <activity
+            android:name=".UnderclothForMan"
+            android:label="@string/title_activity_undercloth_for_man" >
+        </activity>
+        <activity
+            android:name=".BottomForMan"
+            android:label="@string/title_activity_bottom_for_man" >
+        </activity>
+        <activity
+            android:name=".JeansForMan"
+            android:label="@string/title_activity_jeans_for_man" >
+        </activity>
+        <activity
+            android:name=".MansUnderneathCloth"
+            android:label="@string/title_activity_mans_underneath_cloth" >
+        </activity>
+        <activity
+            android:name=".MansBathingSuit"
+            android:label="@string/title_activity_mans_bathing_suit" >
+        </activity>
+        <activity
+            android:name=".MansSocks"
+            android:label="@string/title_activity_mans_socks" >
+        </activity>
+        <activity
+            android:name=".MansWarmUnderCloth"
+            android:label="@string/title_activity_mans_warm_under_cloth" >
+        </activity>
+        <activity
+            android:name=".JacetsAndCoats"
+            android:label="@string/title_activity_jacets_and_coats" >
+        </activity>
+        <activity
+            android:name=".MansJacets"
+            android:label="@string/title_activity_mans_jacets" >
+        </activity>
+        <activity
+            android:name=".MansCoats"
+            android:label="@string/title_activity_mans_coats" >
+        </activity>
+        <activity
+            android:name="com.louashka.yes.MansRainCoats"
+            android:label="@string/title_activity_mans_rain_coats" >
+        </activity>
+        <activity
+            android:name=".MansDownJackets"
+            android:label="@string/title_activity_mans_down_jackets" >
+        </activity>
+        <activity
+            android:name="com.louashka.yes.MansJeansJackets"
+            android:label="@string/title_activity_mans_jeans_jackets" >
+        </activity>
+        <activity
+            android:name=".MansWindCheaters"
+            android:label="@string/title_activity_mans_wind_cheaters" >
+        </activity>
+        <activity
+            android:name=".MansLeatherJackets"
+            android:label="@string/title_activity_mans_leather_jackets" >
+        </activity>
+        <activity
+            android:name=".MansFuzzJacketAndParks"
+            android:label="@string/title_activity_mans_fuzz_jacket_and_parks" >
+        </activity>
+        <activity
+            android:name=".MansVests"
+            android:label="@string/title_activity_mans_vests" >
+        </activity>
+        <activity
+            android:name=".MansSuitAndBlazers"
+            android:label="@string/title_activity_mans_suit_and_blazers" >
+        </activity>
+        <activity
+            android:name=".MansSuits"
+            android:label="@string/title_activity_mans_suits" >
+        </activity>
+        <activity
+            android:name=".MansBlasers"
+            android:label="@string/title_activity_mans_blasers" >
+        </activity>
+        <activity
+            android:name=".SportWear"
+            android:label="@string/title_activity_sport_wear" >
+        </activity>
+        <activity
+            android:name=".SportJackets"
+            android:label="@string/title_activity_sport_jackets" >
+        </activity>
+        <activity
+            android:name=".SportsPants"
+            android:label="@string/title_activity_sports_pants" >
+        </activity>
+        <activity
+            android:name=".HoodedJacket"
+            android:label="@string/title_activity_hooded_jacket" >
+        </activity>
+        <activity
+            android:name=".SportSuits"
+            android:label="@string/title_activity_sport_suits" >
+        </activity>
+        <activity
+            android:name=".PantsWithFleece"
+            android:label="@string/title_activity_pants_with_fleece" >
+        </activity>
+        <activity
+            android:name=".IndoorClothing"
+            android:label="@string/title_activity_indoor_clothing" >
+        </activity>
+        <activity
+            android:name=".IndoorBathrobe"
+            android:label="@string/title_activity_indoor_bathrobe" >
+        </activity>
+        <activity
+            android:name=".IndoorPants"
+            android:label="@string/title_activity_indoor_pants" >
+        </activity>
+        <activity
+            android:name=".Pajamas"
+            android:label="@string/title_activity_pajamas" >
+        </activity>
+        <activity
+            android:name=".TrunksAndShort"
+            android:label="@string/title_activity_trunks_and_short" >
+        </activity>
+        <activity
+            android:name=".SwimmingTrunks"
+            android:label="@string/title_activity_swimming_trunks" >
+        </activity>
+        <activity
+            android:name=".BeachShort"
+            android:label="@string/title_activity_beach_short" >
+        </activity>
+        <activity
+            android:name=".MansHeadDress"
+            android:label="@string/title_activity_mans_head_dress" >
+        </activity>
+        <activity
+            android:name=".MansScarf"
+            android:label="@string/title_activity_mans_scarf" >
+        </activity>
+        <activity
+            android:name=".Gloves"
+            android:label="@string/title_activity_gloves" >
+        </activity>
+        <activity
+            android:name=".Belts"
+            android:label="@string/title_activity_belts" >
+        </activity>
+        <activity
+            android:name=".PorteMonnaieAndBags"
+            android:label="@string/title_activity_porte_monnaie_and_bags" >
+        </activity>
+        <activity
+            android:name=".TieAndHanky"
+            android:label="@string/title_activity_tie_and_hanky" >
+        </activity>
+        <activity
+            android:name=".MansJewelry"
+            android:label="@string/title_activity_mans_jewelry" >
+        </activity>
+        <activity
+            android:name=".MansGlasses"
+            android:label="@string/title_activity_mans_glasses" >
+        </activity>
+        <activity
+            android:name=".MansBracelet"
+            android:label="@string/title_activity_mans_bracelet" >
+        </activity>
+        <activity
+            android:name=".WomansUnderCloth"
+            android:label="@string/title_activity_womans_under_cloth" >
+        </activity>
+        <activity
+            android:name=".WomansIndoorCloth"
+            android:label="@string/title_activity_womans_indoor_cloth" >
+        </activity>
+        <activity
+            android:name=".WomanSportwear"
+            android:label="@string/title_activity_woman_sportwear" >
+        </activity>
+        <activity
+            android:name=".PregnantWear"
+            android:label="@string/title_activity_pregnant_wear" >
+        </activity>
+        <activity
+            android:name=".BabiesGoods"
+            android:label="@string/title_activity_babies_goods" >
+        </activity>
+        <activity
+            android:name=".GirlieGoods"
+            android:label="@string/title_activity_girlie_goods" >
+        </activity>
+        <activity
+            android:name=".JuniorGoods"
+            android:label="@string/title_activity_junior_goods" >
+        </activity>
+        <activity
+            android:name=".SchoolGoods"
+            android:label="@string/title_activity_school_goods" >
+        </activity>
+        <activity
+            android:name=".ChildAccessories"
+            android:label="@string/title_activity_child_accessories" >
         </activity>
     </application>
 

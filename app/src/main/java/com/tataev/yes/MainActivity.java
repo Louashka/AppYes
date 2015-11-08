@@ -1,9 +1,12 @@
 package com.tataev.yes;
 
 import android.content.Intent;
+import android.net.Uri;
+import android.support.v4.view.MenuItemCompat;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.widget.FrameLayout;
 import android.widget.SearchView;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -38,6 +41,7 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
 
         searchView = (SearchView) findViewById(R.id.search_view_main);
         searchView.setQueryHint(getResources().getString(R.string.search_hint));
+        searchView.setOnClickListener(this);
 
         reviews_text = (TextView)findViewById(R.id.reviews_text);
         novelty_text = (TextView)findViewById(R.id.novelty_text);
@@ -64,7 +68,40 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_main, menu);
+               getMenuInflater().inflate(R.menu.menu_main, menu);
+        MenuItem shareItem = menu.findItem(R.id.share);
+        shareItem.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener(){
+            public boolean onMenuItemClick(MenuItem item){
+                Intent sendIntent = new Intent();
+                sendIntent.setAction(Intent.ACTION_SEND);
+                sendIntent.putExtra(Intent.EXTRA_TEXT, "This is my text to send.");
+                sendIntent.setType("text/plain");
+                startActivity(sendIntent);
+             return  true;
+            }
+
+        });
+
+        final MenuItem navigation = menu.findItem(R.id.navigation);
+       navigation.setOnMenuItemClickListener(new MenuItem.OnMenuItemClickListener() {
+           @Override
+           public boolean onMenuItemClick(MenuItem item) {
+
+               Uri gmmIntentUri =  Uri.parse("geo:0,0?q=a+Grozniy");
+               Intent mapIntent = new Intent(Intent.ACTION_VIEW, gmmIntentUri);
+               mapIntent.setPackage("com.google.android.apps.maps");
+               if (mapIntent.resolveActivity(getPackageManager()) != null) {
+                   startActivity(mapIntent);
+               }
+
+               return true;
+           }
+       });
+
+
+
+
+
         return true;
     }
 
@@ -107,6 +144,9 @@ public class MainActivity extends AppCompatActivity implements OnClickListener {
                 break;
             case R.id.abProg_text:
                 startActivity(new Intent(this, AboutProgram.class));
+                break;
+            case R.id.search_view_main:
+                searchView.onActionViewExpanded();
                 break;
             default:
                 break;
