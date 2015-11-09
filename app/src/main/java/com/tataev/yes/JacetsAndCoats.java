@@ -11,10 +11,6 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import com.louashka.yes.MansJeansJackets;
-import com.louashka.yes.MansRainCoats;
-import com.tataev.yes.R;
-
 public class JacetsAndCoats extends AppCompatActivity {
     ListView lvJacetsAndCoats;
     final String LOG_TAG = "myLogs";

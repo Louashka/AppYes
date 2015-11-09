@@ -316,7 +316,7 @@
             android:label="@string/title_activity_mans_coats" >
         </activity>
         <activity
-            android:name="com.louashka.yes.MansRainCoats"
+            android:name=".MansRainCoats"
             android:label="@string/title_activity_mans_rain_coats" >
         </activity>
         <activity
@@ -324,7 +324,7 @@
             android:label="@string/title_activity_mans_down_jackets" >
         </activity>
         <activity
-            android:name="com.louashka.yes.MansJeansJackets"
+            android:name=".MansJeansJackets"
             android:label="@string/title_activity_mans_jeans_jackets" >
         </activity>
         <activity

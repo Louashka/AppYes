@@ -1,4 +1,4 @@
-package com.louashka.yes;
+package com.tataev.yes;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -7,18 +7,18 @@ import android.view.MenuItem;
 
 import com.tataev.yes.R;
 
-public class MansRainCoats extends AppCompatActivity {
+public class MansJeansJackets extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_mans_rain_coats);
+        setContentView(R.layout.activity_mans_jeans_jackets);
     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.menu_mans_rain_coats, menu);
+        getMenuInflater().inflate(R.menu.menu_mans_jeans_jackets, menu);
         return true;
     }
 
